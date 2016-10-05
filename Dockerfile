@@ -12,4 +12,5 @@ ADD env/platformio.ini /root/nodemcu
 
 WORKDIR /root/nodemcu
 CMD platformio run -t upload
+CMD ["/bin/bash"]
 
