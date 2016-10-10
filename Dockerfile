@@ -9,5 +9,6 @@ ADD code/blink.ino /root/nodemcu/src
 RUN rm /root/nodemcu/platformio.ini
 ADD env/platformio.ini /root/nodemcu
 WORKDIR /root/nodemcu
-CMD platformio run && platformio run -t upload
+RUN /bin/bash -c 'echo -e "y\n" | platformio run'
+CMD platformio run -t upload
 
